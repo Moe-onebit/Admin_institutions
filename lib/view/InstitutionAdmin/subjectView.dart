@@ -1,3 +1,4 @@
+import 'package:demo_app_admin/Custom/CustomAddSubject.dart';
 import 'package:flutter/material.dart';
 import '/Custom/CustomAddAdmin.dart';
 import '/Custom/CustomUserCard.dart';
@@ -15,7 +16,7 @@ class _SubjectViewState extends State<SubjectView> {
     customUserCard(imageCover: 'images/profile1.jpg',adminName: 'Mohammad The Monkey',institution: 'The Ape Institution',function: (){},),
     customUserCard(imageCover: 'images/profile1.jpg',adminName: 'Mohammad The Monkey',institution: 'The Ape Institution',function: (){},),
     customUserCard(imageCover: 'images/profile1.jpg',adminName: 'Mohammad The Monkey',institution: 'The Ape Institution',function: (){},),
-    CustomAddAdmin(institution: 'Institution\'s name', description: 'Description', formKey: new GlobalKey(),email: 'Admin\'s email')
+    CustomAddSubject(name: 'Subject\'s name', details: 'Description', formKey: new GlobalKey(),price: 'Price',time: 'Time',teacher: 'Teacher',)
   ];
 
   //TODO:: get the subject data from the database and convert it to a map

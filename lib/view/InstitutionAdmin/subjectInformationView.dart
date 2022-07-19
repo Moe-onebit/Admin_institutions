@@ -1,3 +1,4 @@
+import 'package:demo_app_admin/Custom/CutomAddLecture.dart';
 import 'package:demo_app_admin/Custom/custom_Font.dart';
 import 'package:demo_app_admin/Custom/custom_Pdf.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,7 @@ class _SubjectInformationState extends State<SubjectInformation> {
     CustomPdf(title: 'Lecture',download: (){},openPDF: (){},),
     CustomPdf(title: 'Lecture',download: (){},openPDF: (){},),
     CustomPdf(title: 'Lecture',download: (){},openPDF: (){},),
+    AddLecture(addPDF: (){})
   ];
 
   @override

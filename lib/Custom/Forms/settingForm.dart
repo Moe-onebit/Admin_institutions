@@ -1,7 +1,6 @@
 import 'package:demo_app_admin/Custom/Custom_Raised_Bottun.dart';
 import 'package:demo_app_admin/Custom/custom_Font.dart';
 import 'package:demo_app_admin/view/InstitutionAdmin/institutionView.dart';
-import 'package:demo_app_admin/view/homeView.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -15,7 +14,7 @@ class SettingsForm extends StatefulWidget {
 }
 
 class _SettingsFormState extends State<SettingsForm> {
-  final _formKey =GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
   String? _coverPath;
   String? _profilePath;
   @override
@@ -128,7 +127,7 @@ class _SettingsFormState extends State<SettingsForm> {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
         dialogTitle: 'Please select your profile picture',
         allowedExtensions: ['jpg', 'png', 'jpeg'],
-        type: FileType.image
+        type: FileType.custom
     );
 
     if(result == null) return ;
@@ -144,7 +143,7 @@ class _SettingsFormState extends State<SettingsForm> {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
         dialogTitle: 'Please select your profile picture',
         allowedExtensions: ['jpg', 'png', 'jpeg'],
-        type: FileType.image
+        type: FileType.custom
     );
 
     if(result == null) return ;

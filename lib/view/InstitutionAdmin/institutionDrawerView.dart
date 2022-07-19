@@ -59,29 +59,31 @@ class _InstitutionDrawerViewState extends State<InstitutionDrawerView> {
       );
     }
 
-    return Scaffold(
-      resizeToAvoidBottomInset: true,
-      appBar: AppBar(
-        backgroundColor: Colors.teal,
-        title: CustomFont(text: _selectedDrawerFragmentTitle,fontWeight: FontWeight.bold,fontSize: 18,letterSpacing: 0.7,fontFamily: 'Cabin',),
-        centerTitle: true,
-        actions: [
-          Icon(
-              Icons.logout
-          ),
-          SizedBox(
-            width: 20,
-          ),
-        ],
-      ),
-      drawer:  Drawer(
-        child:  Column(
-          children: <Widget>[
-            Column(children: drawerOptions)
+    return SafeArea(
+      child: Scaffold(
+        resizeToAvoidBottomInset: true,
+        appBar: AppBar(
+          backgroundColor: Colors.teal,
+          title: CustomFont(text: _selectedDrawerFragmentTitle,fontWeight: FontWeight.bold,fontSize: 18,letterSpacing: 0.7,fontFamily: 'Cabin',),
+          centerTitle: true,
+          actions: [
+            Icon(
+                Icons.logout
+            ),
+            SizedBox(
+              width: 20,
+            ),
           ],
         ),
+        drawer:  Drawer(
+          child:  Column(
+            children: <Widget>[
+              Column(children: drawerOptions)
+            ],
+          ),
+        ),
+        body: _getDrawerFragmentWidgetIndex(_selectedDrawerFragmentIndex),
       ),
-      body: _getDrawerFragmentWidgetIndex(_selectedDrawerFragmentIndex),
     );
   }
 }
